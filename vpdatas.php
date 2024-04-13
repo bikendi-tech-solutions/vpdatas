@@ -3,7 +3,7 @@
 *Plugin Name: VP Data Cards
 *Plugin URI: http://vtupress.com
 *Description: Add Data Card Printing Business To Your Website
-*Version: 1.1.5
+*Version: 1.1.6
 *Author: Akor Victor
 *Author URI: https://facebook.com/akor.victor.39
 */
@@ -77,6 +77,8 @@ $myUpdateChecker = PucFactory::buildUpdateChecker(
 );
 //Set the branch that contains the stable release.
 $myUpdateChecker->setBranch('main');
+
+$myUpdateChecker->setAuthentication('your-token-here');
 
 $myUpdateChecker->getVcsApi()->enableReleaseAssets();
 
